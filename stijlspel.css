@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0; /* Verwijdert standaard margin */
+    display: flex;
+    flex-direction: column; /* Plaatst de inhoud verticaal onder elkaar */
+    align-items: center; /* Centreert de inhoud horizontaal */
+    height: 100vh; /* Gebruikt de volledige hoogte van het scherm */
+    padding: 20px; /* Voegt ruimte rondom de inhoud toe */
+}
+
+.nav-buttons {
+    display: flex; /* Zorgt ervoor dat de knoppen naast elkaar staan */
+    gap: 10px; /* Creëert ruimte tussen de knoppen */
+    align-self: flex-start; /* Zorgt ervoor dat de knoppen links uitgelijnd zijn */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #001158;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #001158;
+}
+
+.button.active {
+    background-color: gray; /* Grijze kleur voor de actieve knop */
+    cursor: default;
+}
+
+.divider {
+    border: 0;
+    height: 2px;
+    background-color: #001158;
+    margin: 10px 0; /* Ruimte boven en onder de divider */
+    width: 100%; /* De divider vult de volledige breedte */
+}
+
+h1 {
+    text-align: center; /* Centreert de titel */
+    margin: 20px 0; /* Ruimte boven en onder de titel */
+    color: #001158;
+
+}
+
+#game-container {
+    display: flex;
+    justify-content: center; /* Centreert het spelcontainer */
+    width: 100%; /* Gebruikt de volledige breedte */
+}
+
+#game {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black; /* Zwarte rand rondom het speelveld */
+    position: relative;
+    background-color: #fff;
+    overflow: hidden; /* Verbergt alles buiten het speelveld */
+}
+
+#character {
+    width: 20px;
+    height: 50px;
+    background-color: red; /* Rode kleur voor het karakter */
+    position: absolute;
+    bottom: 0px; /* Zorgt ervoor dat het karakter op de grond staat */
+    left: 100px; /* Plaatst het karakter 100px van de linkerkant */
+}
+
+.animate {
+    animation: jump 500ms; /* Zorgt voor de springanimatie van 500ms */
+}
+
+/* Definieert de springanimatie voor het karakter */
+@keyframes jump {
+    0% { bottom: 0px; }
+    30% { bottom: 50px; }
+    70% { bottom: 50px; }
+    100% { bottom: 0px; }
+}
+
+#block {
+    width: 20px;
+    height: 20px;
+    background-color: blue; /* Blauwe kleur voor het obstakel */
+    position: absolute;
+    bottom: 0px;
+    left: 480px;
+    animation: block 1.5s infinite linear; /* Laat het blok continu bewegen van rechts naar links */
+}
+
+/* Definieert de beweging van het obstakel van rechts naar links */
+@keyframes block {
+    0% { left: 480px; }
+    100% { left: -40px; }
+}
+
+.score {
+    font-size: 20px;
+    margin-bottom: 20px; /* Voegt ruimte toe tussen de score en andere elementen */
+}

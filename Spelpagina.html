@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl" onclick="jump()">
+<head>
+    <meta charset="utf-8">
+    <title>Javascript spel</title>
+    <link rel="stylesheet" href="stijlspel.css">
+</head>
+<body>
+    <!-- Container voor knoppen -->
+    <div class="nav-buttons">
+        <a href="Hoofdpagina.html" class="button">Hoofdpagina</a>
+        <a href="Spelpagina.html" class="button active">Mijn spel</a>
+        <a href="Methode.html" class="button">Methode</a>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Titel -->
+    <h1>Mijn platformer</h1>
+    <div id="score" class="score">Score: 0</div>
+
+    <!-- Speelveld container -->
+    <div id="game-container">
+        <div id="game">
+            <div id="character"></div>
+            <div id="block"></div>
+        </div>
+    </div>
+    <button id="restart-button" class="button">Herstart</button>
+
+
+    <script src="Javascriptspel.js"></script>
+</body>
+</html>

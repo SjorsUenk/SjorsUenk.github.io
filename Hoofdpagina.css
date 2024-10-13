@@ -1,0 +1,44 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+
+}
+h1 {
+  color: #001158;
+}
+p {
+  color: #001158;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #001158;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #001158;
+}
+.button.active {
+  background-color: gray;
+  cursor: default;
+}
+.divider {
+  border: 0;
+  height: 2px;
+  background-color: #001158;
+  margin: 5px 0;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+p1 {margin-left: 30px;
+}
